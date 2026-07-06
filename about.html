@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من نحن | درة الإسلام للعمرة</title>
+    <meta name="description" content="تعرف على درة الإسلام للعمرة وخدمات تنظيم رحلات العمرة من المدينة المنورة.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+        :root {
+            --primary: #01323b;
+            --secondary: #FFFFFF;
+            --accent: #ffdf46;
+            --light-gold: #F5F2E8;
+            --dark-gold: #B8941F;
+            --gray: #0f3940;
+            --light-gray: #e6f4f4;
+            --whatsapp: #25D366;
+            --call: #1E88E5;
+            --blue: #1E88E5;
+            --green-alt: #2E7D32;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            background-color: var(--secondary);
+            color: var(--primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4 { font-weight: 700; margin-bottom: 1rem; }
+        h1 { font-size: 3rem; }
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            color: var(--primary);
+        }
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 100px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        p { margin-bottom: 1rem; font-size: 1.1rem; }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        section { padding: 100px 0; }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            margin: 5px;
+            font-size: 1.05rem;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            border: none;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            min-width: 170px;
+            text-align: center;
+        }
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            width: 0%; height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+        .btn:hover:before { width: 100%; }
+        .btn:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+        .btn-book { background: var(--accent); color: var(--primary); }
+        .btn-call { background: var(--call); color: var(--secondary); }
+        .btn-whatsapp { background: var(--whatsapp); color: var(--secondary); }
+        .btn-blue { background: var(--blue); color: var(--secondary); }
+        .btn-green-alt { background: var(--green-alt); color: var(--secondary); }
+        .btn-whatsapp-dark {
+            background: var(--whatsapp);
+            color: var(--secondary);
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+        }
+        .btn-dark {
+            background: var(--primary);
+            color: var(--secondary);
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+        }
+
+        /* Header */
+        header {
+            background: transparent;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        header.scrolled {
+            background: rgba(0, 60, 70, 0.95);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .logo-container { display: flex; align-items: center; }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--secondary);
+            text-decoration: none;
+        }
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+            position: relative;
+        }
+        .crescent-icon {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+        .logo-text { display: flex; flex-direction: column; }
+        .logo-main { font-size: 1.2rem; line-height: 1; font-weight: 800; }
+        .logo-sub { font-size: 0.7rem; color: #d0f2f2; font-weight: 600; }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links li { margin-left: 25px; }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary);
+            font-weight: 600;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: 5px 0;
+            font-size: 1rem;
+        }
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: 0; right: 0;
+            width: 0; height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+        .nav-links a:hover:after { width: 100%; }
+        .nav-links a:hover { color: var(--accent); }
+        .nav-buttons { display: flex; gap: 15px; margin-right: 20px; }
+        .nav-btn {
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+        .nav-call {
+            background: var(--accent);
+            color: var(--primary);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        .nav-whatsapp {
+            background: var(--whatsapp);
+            color: var(--secondary);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+        .nav-btn:hover { transform: translateY(-3px); }
+        .hamburger { display: none; cursor: pointer; }
+
+        /* HERO */
+        .hero {
+            position: relative;
+            padding: 190px 0 130px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            color: var(--secondary);
+            background-image:
+              linear-gradient(rgba(0, 70, 80, 0.88), rgba(0, 60, 70, 0.9)),
+              url('https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero::after {
+            content:'';
+            position:absolute;
+            inset:0;
+            background: radial-gradient(circle at 50% 20%, rgba(255,255,255,0.06) 0%, transparent 55%);
+            pointer-events:none;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 780px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .hero-logo-circle {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: rgba(0, 40, 50, 0.9);
+            border: 3px solid var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        }
+        .hero-logo-circle i {
+            font-size: 3rem;
+            color: var(--accent);
+        }
+        .hero-small-title {
+            font-size: 1.1rem;
+            color: #d0f2f2;
+            margin-bottom: 8px;
+        }
+        .hero-main-title {
+            font-family: 'Tajawal', sans-serif;
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: #ffdf46;
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
+        .hero-subline {
+            font-size: 1.1rem;
+            color: #e7f7f7;
+            margin-bottom: 18px;
+        }
+        .hero-divider {
+            width: 90px;
+            height: 3px;
+            background: var(--accent);
+            margin: 0 auto 18px;
+            border-radius: 999px;
+        }
+        .hero-typing-wrapper {
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+            color: #ffeb7a;
+            display: flex;
+            justify-content: center;
+        }
+        .hero-typing {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            border-left: 2px solid #ffeb7a;
+            padding-left: 6px;
+            box-sizing: border-box;
+            width: 0;
+            animation: typing 3.5s steps(26, end) infinite alternate,
+                       caret 0.75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to   { width: 26ch; }
+        }
+        @keyframes caret {
+            from, to { border-left-color: transparent; }
+            50%      { border-left-color: #ffeb7a; }
+        }
+        .hero-bullet-line {
+            font-size: 0.97rem;
+            color: #eaf6f6;
+            margin-bottom: 25px;
+        }
+        .hero-bullet-line span {
+            margin: 0 4px;
+        }
+        .hero-buttons-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 22px;
+        }
+        .hero-buttons-grid .btn {
+            min-width: 160px;
+            padding: 12px 26px;
+            font-size: 0.95rem;
+        }
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            font-size: 0.9rem;
+            color: #eaf6f6;
+        }
+        .hero-badge-item {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: rgba(0, 50, 60, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        .hero-badge-item i {
+            margin-left: 6px;
+        }
+        .hero-badge-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            margin-left: 6px;
+            background: #2ecc71;
+        }
+        .hero-rating-star { color: #ffeb3b; }
+        .hero-shield { color: #b3e5fc; }
+
+        /* Packages */
+        .packages { background: var(--light-gray); position: relative; overflow: hidden; }
+        .packages-bg {
+            position: absolute; top:0; right:0; width:100%; height:100%;
+            background: radial-gradient(circle at 30% 70%, rgba(0,80,90,0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 20%, rgba(0,80,90,0.08) 0%, transparent 50%);
+        }
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            position: relative; z-index: 1;
+        }
+        .package-card {
+            background: var(--secondary);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            transition: all 0.5s ease;
+            position: relative;
+        }
+        .package-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+        }
+        .package-card:before {
+            content:'';
+            position:absolute; top:0; right:0;
+            width:100%; height:5px;
+            background: var(--accent);
+            transform: scaleX(0);
+            transform-origin:left;
+            transition: transform 0.5s ease;
+        }
+        .package-card:hover:before { transform: scaleX(1); }
+        .package-header {
+            padding:25px;
+            background: var(--primary);
+            color: var(--secondary);
+            text-align:center;
+            position:relative;
+        }
+        .package-icon { font-size:2.5rem; margin-bottom:15px; color:var(--accent); }
+        .package-body { padding:25px; }
+        .package-features {
+            list-style:none;
+            margin-bottom:25px;
+        }
+        .package-features li {
+            padding:10px 0;
+            border-bottom:1px solid var(--light-gray);
+            position:relative;
+            padding-right:40px;
+            font-size:1rem;
+        }
+        .package-features li:before{
+            content:'✓';
+            position:absolute; right:0;
+            color:var(--accent);
+            font-weight:bold;
+            width:30px; height:30px;
+            background:rgba(255,223,70,0.18);
+            border-radius:50%;
+            display:flex; align-items:center; justify-content:center;
+        }
+        .package-btns{display:flex;gap:10px;justify-content:space-between;}
+        .package-btns .btn{flex:1;margin:0;}
+
+        /* Why us */
+        .why-us{position:relative;overflow:hidden;}
+        .why-us-bg{
+            position:absolute;top:0;right:0;width:100%;height:100%;
+            background:radial-gradient(circle at 20% 80%, rgba(0,80,90,0.06) 0%, transparent 50%),
+                       radial-gradient(circle at 80% 20%, rgba(0,80,90,0.06) 0%, transparent 50%);
+        }
+        .features-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+            gap:30px;
+            position:relative;z-index:1;
+        }
+        .feature-box{
+            background:var(--secondary);
+            padding:40px 30px;
+            border-radius:15px;
+            text-align:center;
+            box-shadow:0 10px 30px rgba(0,0,0,0.05);
+            transition:all 0.3s ease;
+        }
+        .feature-box:hover{
+            transform:translateY(-10px);
+            box-shadow:0 15px 40px rgba(0,0,0,0.1);
+        }
+        .feature-icon{
+            font-size:3rem;
+            color:var(--accent);
+            margin-bottom:25px;
+            position:relative;
+            display:inline-block;
+        }
+        .feature-icon:after{
+            content:'';
+            position:absolute;
+            top:50%; right:50%;
+            transform:translate(50%, -50%);
+            width:70px;height:70px;
+            background:rgba(255,223,70,0.18);
+            border-radius:50%;
+            z-index:-1;
+        }
+
+        /* Hotels */
+        .hotels{background:var(--secondary);position:relative;overflow:hidden;}
+        .hotels-bg{
+            position:absolute;top:0;right:0;width:100%;height:100%;
+            background:radial-gradient(circle at 10% 20%, rgba(0,80,90,0.05) 0%, transparent 50%),
+                       radial-gradient(circle at 90% 80%, rgba(0,80,90,0.05) 0%, transparent 50%);
+        }
+        .hotels-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(350px,1fr));
+            gap:30px;
+            position:relative;z-index:1;
+        }
+        .hotel-card{
+            background:var(--secondary);
+            border-radius:20px;
+            overflow:hidden;
+            box-shadow:0 15px 40px rgba(0,0,0,0.1);
+            transition:all 0.5s ease;
+        }
+        .hotel-card:hover{
+            transform:translateY(-15px);
+            box-shadow:0 25px 60px rgba(0,0,0,0.15);
+        }
+        .hotel-image{height:250px;position:relative;overflow:hidden;}
+        .hotel-image img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;}
+        .hotel-card:hover .hotel-image img{transform:scale(1.1);}
+        .hotel-badge{
+            position:absolute;top:20px;left:20px;
+            background:var(--accent);color:var(--primary);
+            padding:8px 20px;border-radius:30px;font-weight:700;font-size:0.9rem;
+        }
+        .hotel-content{padding:30px;}
+        .hotel-header{margin-bottom:20px;}
+        .hotel-header h3{font-size:1.8rem;margin-bottom:10px;color:var(--primary);}
+        .hotel-location{display:flex;align-items:center;color:var(--gray);margin-bottom:5px;font-size:1rem;}
+        .hotel-location i{margin-left:8px;color:var(--accent);}
+        .hotel-distance{display:flex;align-items:center;color:var(--accent);font-weight:600;margin-bottom:20px;}
+        .hotel-distance i{margin-left:8px;}
+        .hotel-features{list-style:none;margin-bottom:25px;}
+        .hotel-features li{
+            padding:10px 0;border-bottom:1px solid var(--light-gray);
+            font-size:1rem;display:flex;align-items:center;
+        }
+        .hotel-features li i{margin-left:10px;color:var(--accent);width:25px;text-align:center;}
+        .hotel-btns{display:flex;gap:10px;}
+        .hotel-btns .btn{flex:1;margin:0;padding:12px 25px;font-size:1rem;}
+
+        /* Buses / Services */
+        .buses{background:var(--light-gray);position:relative;overflow:hidden;}
+        .buses-bg{
+            position:absolute;top:0;right:0;width:100%;height:100%;
+            background:radial-gradient(circle at 10% 10%, rgba(0,80,90,0.1) 0%, transparent 50%),
+                       radial-gradient(circle at 90% 90%, rgba(0,80,90,0.1) 0%, transparent 50%);
+        }
+        .buses-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+            gap:30px;
+            position:relative;z-index:1;
+        }
+        .bus-card{
+            background:var(--secondary);
+            border-radius:20px;
+            overflow:hidden;
+            box-shadow:0 15px 40px rgba(0,0,0,0.1);
+            transition:all 0.5s ease;
+        }
+        .bus-card:hover{
+            transform:translateY(-15px);
+            box-shadow:0 25px 60px rgba(0,0,0,0.15);
+        }
+        .bus-image-container{
+            height:200px;
+            position:relative;overflow:hidden;
+            display:flex;align-items:center;justify-content:center;
+        }
+        .bus-badge{
+            position:absolute;top:20px;left:20px;
+            background:var(--accent);color:var(--primary);
+            padding:8px 15px;border-radius:30px;font-weight:700;font-size:0.9rem;
+            z-index:2;
+        }
+        .bus-content{padding:25px;}
+        .bus-content h3{font-size:1.6rem;margin-bottom:20px;position:relative;display:inline-block;color:var(--primary);}
+        .bus-content h3:after{
+            content:'';position:absolute;bottom:-10px;right:0;
+            width:50px;height:3px;background:var(--accent);border-radius:2px;
+        }
+        .bus-features{list-style:none;margin-bottom:25px;}
+        .bus-features li{
+            padding:8px 0;border-bottom:1px solid var(--light-gray);
+            position:relative;padding-right:35px;font-size:1rem;
+        }
+        .bus-features li:before{
+            content:'✓';position:absolute;right:0;
+            color:var(--accent);font-weight:bold;width:25px;height:25px;
+            background:rgba(255,223,70,0.18);border-radius:50%;
+            display:flex;align-items:center;justify-content:center;
+        }
+        .bus-btns{display:flex;flex-wrap:wrap;gap:10px;}
+
+        /* Gallery */
+        .gallery {
+            background: var(--secondary);
+            position: relative;
+            overflow: hidden;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .gallery-item {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            aspect-ratio: 4/3;
+        }
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Footer */
+        footer{
+            background:var(--primary);
+            color:var(--secondary);
+            padding:80px 0 30px;
+            position:relative;overflow:hidden;
+        }
+        .footer-bg{
+            position:absolute;top:0;right:0;width:100%;height:100%;
+        }
+        .footer-content{
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+            gap:40px;
+            margin-bottom:50px;
+            position:relative;z-index:1;
+        }
+        .footer-about{display:flex;flex-direction:column;}
+        .footer-logo{display:flex;align-items:center;margin-bottom:20px;}
+        .footer-logo-icon{
+            width:50px;height:50px;background:var(--accent);
+            border-radius:50%;display:flex;align-items:center;justify-content:center;
+            margin-left:10px;
+        }
+        .footer-crescent{font-size:1.8rem;color:var(--primary);}
+        .footer-logo-text{display:flex;flex-direction:column;}
+        .footer-logo-main{font-size:1.3rem;font-weight:800;line-height:1;}
+        .footer-logo-sub{font-size:0.7rem;color:rgba(255,255,255,0.7);font-weight:600;}
+        .footer-about p{margin-bottom:20px;color:rgba(255,255,255,0.8);}
+        .contact-info p{
+            display:flex;align-items:center;margin-bottom:10px;
+            color:rgba(255,255,255,0.8);
+        }
+        .contact-info i{margin-left:10px;color:var(--accent);}
+        .social-links{display:flex;gap:15px;}
+        .social-links a{
+            display:inline-flex;align-items:center;justify-content:center;
+            width:45px;height:45px;background:rgba(255,255,255,0.1);
+            border-radius:50%;color:var(--secondary);transition:all 0.3s ease;
+        }
+        .social-links a:hover{background:var(--accent);color:var(--primary);transform:translateY(-5px);}
+        .footer-links h4{
+            font-size:1.3rem;margin-bottom:25px;position:relative;padding-bottom:10px;
+        }
+        .footer-links h4:after{
+            content:'';position:absolute;bottom:0;right:0;
+            width:50px;height:3px;background:var(--accent);border-radius:2px;
+        }
+        .footer-links ul{list-style:none;}
+        .footer-links li{margin-bottom:12px;}
+        .footer-links a{
+            color:rgba(255,255,255,0.7);
+            text-decoration:none;transition:all 0.3s ease;
+            display:flex;align-items:center;
+        }
+        .footer-links a:before{
+            content:'›';margin-left:8px;color:var(--accent);
+            transition:transform 0.3s ease;
+        }
+        .footer-links a:hover{color:var(--accent);transform:translateX(-5px);}
+        .footer-links a:hover:before{transform:translateX(-3px);}
+        .copyright{
+            text-align:center;padding-top:30px;
+            border-top:1px solid rgba(255,255,255,0.1);
+            font-size:0.9rem;color:rgba(255,255,255,0.6);
+        }
+
+        /* Floating Buttons */
+        .floating-btns{
+            position:fixed;
+            bottom:30px;left:30px;
+            z-index:1000;
+            display:flex;flex-direction:column;gap:15px;
+        }
+        .floating-btn{
+            width:60px;height:60px;border-radius:50%;
+            display:flex;align-items:center;justify-content:center;
+            color:var(--secondary);font-size:1.5rem;
+            box-shadow:0 5px 20px rgba(0,0,0,0.2);
+            transition:all 0.3s ease;
+            text-decoration:none;
+        }
+        .floating-btn:hover{transform:scale(1.1);}
+        .call-btn{background:var(--call);}
+        .whatsapp-btn{background:var(--whatsapp);}
+
+        /* Mobile menu */
+        .mobile-menu{
+            position:fixed;top:70px;right:-100%;
+            width:80%;height:calc(100vh - 70px);
+            background:rgba(0,60,70,0.96);
+            transition:right 0.5s ease;
+            box-shadow:-5px 0 15px rgba(0,0,0,0.3);
+            z-index:999;
+            display:flex;flex-direction:column;
+            padding:30px;overflow-y:auto;
+        }
+        .mobile-menu.active{right:0;}
+        .mobile-nav-links{list-style:none;margin-bottom:30px;}
+        .mobile-nav-links li{margin-bottom:20px;}
+        .mobile-nav-links a{
+            text-decoration:none;color:#eaf6f6;
+            font-weight:600;font-size:1.2rem;
+            display:block;padding:10px 0;
+            border-bottom:1px solid rgba(255,255,255,0.12);
+        }
+        .mobile-nav-buttons{display:flex;flex-direction:column;gap:15px;}
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .nav-links, .nav-buttons { display:none; }
+            .hamburger { display:block; }
+        }
+        @media (max-width: 768px) {
+            .navbar { padding:0; }
+            .hamburger{
+                display:flex;flex-direction:column;
+                width:30px;height:25px;
+                justify-content:space-between;
+            }
+            .hamburger span{
+                display:block;width:100%;height:3px;
+                background:var(--secondary);
+                border-radius:3px;transition:all 0.3s ease;
+            }
+            .hamburger.active span:nth-child(1){
+                transform:rotate(45deg) translate(5px,5px);
+            }
+            .hamburger.active span:nth-child(2){opacity:0;}
+            .hamburger.active span:nth-child(3){
+                transform:rotate(-45deg) translate(7px,-6px);
+            }
+            .hero{
+                padding:170px 0 100px;
+                background-position:center;
+            }
+            .hero-main-title{font-size:2.1rem;}
+            .hero-subline{font-size:1rem;}
+            .hero-bullet-line{font-size:0.95rem;}
+            .hero-buttons-grid .btn{
+                min-width:140px;
+                padding:10px 20px;
+                font-size:0.9rem;
+            }
+            .floating-btns{left:20px;bottom:20px;}
+            .floating-btn{width:55px;height:55px;font-size:1.3rem;}
+        }
+        @media (max-width: 576px) {
+            .hero{
+                padding:150px 0 80px;
+            }
+            .hero-main-title{font-size:1.9rem;}
+            .hero-logo-circle{width:95px;height:95px;}
+            section{padding:70px 0;}
+            .packages-grid,
+            .hotels-grid,
+            .buses-grid{grid-template-columns:1fr;}
+            .package-btns,.hotel-btns{flex-direction:column;}
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+            .nav-links a.active,
+        .mobile-nav-links a.active { color: var(--accent); }
+        .page-hero {
+            position: relative;
+            padding: 150px 0 80px;
+            color: var(--secondary);
+            background-image: linear-gradient(rgba(0, 70, 80, 0.9), rgba(0, 60, 70, 0.92)), url('https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=1800&q=80');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+        .page-hero h1 { color: var(--accent); font-size: 2.8rem; margin-bottom: 12px; }
+        .page-hero p { max-width: 760px; margin: 0 auto; color: #eaf6f6; }
+        .content-band { padding: 80px 0; }
+        .content-band.alt { background: var(--light-gray); }
+        .intro-grid, .stats-grid, .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+        .info-panel, .faq-item, .stat-item {
+            background: var(--secondary);
+            border-radius: 14px;
+            padding: 28px;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+        }
+        .info-panel i, .stat-item i { color: var(--accent); font-size: 2rem; margin-bottom: 14px; }
+        .stat-item { text-align: center; }
+        .stat-number { display: block; font-size: 2rem; font-weight: 800; color: var(--primary); }
+        .faq-item h3 { display: flex; gap: 10px; align-items: center; color: var(--primary); }
+        .faq-item h3 i { color: var(--accent); }
+        .cta-band { background: var(--primary); color: var(--secondary); text-align: center; padding: 70px 0; }
+        .cta-band h2 { color: var(--secondary); }
+        .cta-band p { color: #eaf6f6; max-width: 720px; margin: 0 auto 24px; }
+    </style>
+</head>
+<body>
+    <header class="scrolled">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo-container">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-moon crescent-icon"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-main">درة الإسلام</span>
+                            <span class="logo-sub">للعمرة</span>
+                        </div>
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="trips.html">رحلاتنا</a></li>
+                    <li><a href="about.html" class="active">من نحن</a></li>
+                    <li><a href="faq.html">أسئلة شائعة</a></li>
+                    <li><a href="trips.html#hotels">الفنادق</a></li>
+                    <li><a href="trips.html#services">الخدمات</a></li>
+                    <li><a href="index.html#gallery">معرض الصور</a></li>
+                    <li><a href="index.html#contact">اتصل بنا</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="tel:+966510299518" class="nav-btn nav-call">اتصل الآن</a>
+                    <a href="https://wa.me/966510299518" class="nav-btn nav-whatsapp">واتساب</a>
+                </div>
+                <div class="hamburger">
+                    <span></span><span></span><span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="trips.html">رحلاتنا</a></li>
+            <li><a href="about.html" class="active">من نحن</a></li>
+            <li><a href="faq.html">أسئلة شائعة</a></li>
+            <li><a href="trips.html#hotels">الفنادق</a></li>
+            <li><a href="trips.html#services">الخدمات</a></li>
+            <li><a href="index.html#gallery">معرض الصور</a></li>
+            <li><a href="index.html#contact">اتصل بنا</a></li>
+        </ul>
+        <div class="mobile-nav-buttons">
+            <a href="tel:+966510299518" class="btn btn-call">اتصل الآن</a>
+            <a href="https://wa.me/966510299518" class="btn btn-whatsapp">
+                <i class="fab fa-whatsapp" style="margin-left:8px;"></i> واتساب مباشر
+            </a>
+        </div>
+    </div>
+    <section class="page-hero"><div class="container"><h1>من نحن</h1><p>درة الإسلام للعمرة فريق متخصص في تنظيم رحلات العمرة من المدينة المنورة إلى مكة المكرمة بخدمة واضحة ومتابعة مستمرة من بداية الحجز حتى العودة.</p></div></section>
+    <section class="content-band"><div class="container intro-grid"><div class="info-panel"><i class="fas fa-kaaba"></i><h3>رحلات منظمة</h3><p>نرتب تفاصيل الرحلة من مواعيد الانطلاق والسكن والتنقل، حتى تكون التجربة مريحة وواضحة لكل معتمر.</p></div><div class="info-panel"><i class="fas fa-user-shield"></i><h3>متابعة واهتمام</h3><p>فريقنا يتابع معك قبل الرحلة وأثناءها، ويجاوب على الاستفسارات عبر الهاتف وواتساب.</p></div><div class="info-panel"><i class="fas fa-hotel"></i><h3>اختيارات مناسبة</h3><p>نوفر باقات وفنادق وخدمات نقل تناسب احتياجات مختلفة مع الحرص على الراحة والقرب من الحرم.</p></div></div></section>
+    <section class="content-band alt"><div class="container"><h2>لماذا يختارنا المعتمرون؟</h2><div class="stats-grid"><div class="stat-item"><i class="fas fa-bus"></i><span class="stat-number">رحلات أسبوعية</span><p>مواعيد ثابتة ومتعددة على مدار الأسبوع.</p></div><div class="stat-item"><i class="fab fa-whatsapp"></i><span class="stat-number">دعم مباشر</span><p>تواصل سريع للحجز والمتابعة والاستفسار.</p></div><div class="stat-item"><i class="fas fa-map-marked-alt"></i><span class="stat-number">من المدينة</span><p>انطلاق من المدينة المنورة إلى مكة المكرمة.</p></div></div></div></section>
+    <section class="cta-band"><div class="container"><h2>جاهز تحجز رحلتك؟</h2><p>تواصل معنا الآن لمعرفة أقرب موعد وتفاصيل الباقة المناسبة لك.</p><a href="https://wa.me/966510299518" class="btn btn-whatsapp"><i class="fab fa-whatsapp" style="margin-left:8px;"></i> احجز عبر واتساب</a><a href="tel:+966510299518" class="btn btn-call"><i class="fas fa-phone" style="margin-left:8px;"></i> اتصل الآن</a></div></section>
+    <footer id="contact">
+        <div class="footer-bg"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon"><i class="fas fa-moon footer-crescent"></i></div>
+                        <div class="footer-logo-text"><span class="footer-logo-main">درة الإسلام</span><span class="footer-logo-sub">للعمرة</span></div>
+                    </div>
+                    <p>درة الإسلام للعمرة توفر رحلات عمرة من المدينة المنورة بأسعار مناسبة وخدمات مميزة.</p>
+                    <div class="contact-info"><p><i class="fas fa-phone"></i> 0510299518</p><p><i class="fab fa-whatsapp"></i> 0510299518</p></div>
+                    <div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="https://wa.me/966510299518"><i class="fab fa-whatsapp"></i></a></div>
+                </div>
+                <div class="footer-links">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="trips.html">رحلاتنا</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="faq.html">أسئلة شائعة</a></li>
+                        <li><a href="trips.html#hotels">الفنادق</a></li>
+                        <li><a href="trips.html#services">الخدمات</a></li>
+                        <li><a href="index.html#gallery">معرض الصور</a></li>
+                        <li><a href="index.html#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>خدماتنا</h4>
+                    <ul>
+                        <li><a href="trips.html">رحلات العمرة من المدينة</a></li>
+                        <li><a href="trips.html#services">باصات ترددية</a></li>
+                        <li><a href="trips.html#services">مشرفين متميزين</a></li>
+                        <li><a href="trips.html#hotels">حجز الفنادق</a></li>
+                        <li><a href="index.html#contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">© 2026 درة الإسلام للعمرة. جميع الحقوق محفوظة.</div>
+        </div>
+    </footer>
+<!-- Floating Buttons -->
+    <div class="floating-btns">
+        <a href="tel:+966510299518" class="floating-btn call-btn">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://wa.me/966510299518" class="floating-btn whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    
+<script>
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+        
+        // Header Background on Scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 40) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
